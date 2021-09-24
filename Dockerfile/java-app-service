@@ -1,0 +1,5 @@
+FROM openjdk:8u171-jre-alpine
+MAINTAINER laoshuzi
+ARG APP_JAR_FILE
+COPY ${APP_JAR_FILE} /app/app.jar
+ENTRYPOINT ["java", "-jar", "-Xms64m", "-Xmx128m", "-Dspring.profiles.active=stable", "/app/app.jar"]
