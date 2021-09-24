@@ -1,0 +1,5 @@
+FROM node:14.17.6-alpine3.12
+MAINTAINER laoshuzi
+WORKDIR /app
+EXPOSE 3000
+CMD ["npm","start"]
