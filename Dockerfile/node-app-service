@@ -1,0 +1,7 @@
+FROM node:14.17.6-alpine3.12
+MAINTAINER laoshuzi
+ARG APP_DIR
+COPY ${APP_DIR} /app
+WORKDIR /app
+EXPOSE 3000
+CMD ["npm","start"]
